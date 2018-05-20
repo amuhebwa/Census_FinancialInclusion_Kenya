@@ -13,7 +13,11 @@ import os
 from rtree import index
 import matplotlib.pyplot as plt
 
-
+'''
+load financial inclusion data, create  look up table for the geo-located points,
+merge the two datasets, count the number of financial access points in each constituency, 
+and plot the results
+'''
 def load_shapefile(fpath):
     fileName = os.path.join(os.getcwd(), fpath)
     dataset = gpd.read_file(fileName)

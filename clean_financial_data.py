@@ -10,7 +10,10 @@ import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point
 
-
+'''
+Python code to extract only the required data from the financial inclusion datasets, save a copy to
+a csv file and generate shape files
+'''
 def save_shapefiles(data, filename):
     points = [Point(row['GPS Longitude'], row['GPS Latitude']) for row_id, row in data.iterrows()]
     tempfile = gpd.GeoDataFrame(data, geometry=points)

@@ -13,7 +13,10 @@ from pylab import *
 import seaborn as sns
 import numpy as np
 
-
+'''
+Fix constituence names in the census data, merge with the constituences shape file
+and generate a shape file of the combined data. 
+'''
 def load_dataset(fpath):
     fileName = os.path.join(os.getcwd(), fpath)
     dataset = pd.read_csv(fileName)
